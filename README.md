@@ -4,3 +4,6 @@ https://codepen.io/tutsplus/pen/VvZXMP <br> https://illustrator.qodeinteractive.
 sangar scroll https://slaveryfootprint.org/#where_do_you_live <br>
 
 materiaize: https://slimhamdi.net/moscow/demos/index-dark.html
+
+<br>
+font kartun: https://speckyboy.com/free-comic-cartoon-fonts/
