@@ -1,0 +1,389 @@
+$max: 766px;
+// $blue: rgb(83, 157, 192);
+$blue: #2b88b4;
+$orange: #f7941f;
+$primary: #b7a291;
+// $primary:#a39082;
+
+section {
+  // background: #b0ffe3;
+  background: $primary;
+  position: relative;
+  padding: 32px 0;
+
+  // z-index: 99;
+  // text-align: justify;
+  h2 {
+    text-align: left;
+  }
+
+  // min-height: 100vh;
+}
+
+.banner {
+  height: 100vh;
+  width: auto;
+  padding: 0;
+  z-index: 9;
+  position: relative;
+
+  // background: linear-gradient(to right, rgba(36,31,31,1) 0%, rgba(36,31,31,1) 32%, rgba(74,71,70,1) 100%);
+  &:before {
+    content: "";
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 250px 30px black;
+    background-image: url('../img/batako.jpg');
+  }
+
+  @media screen and (max-width: 766px) {
+    height: 33vh;
+  }
+
+  #container {
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 80vw;
+    // width: 100%;
+    height: 80vh;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    filter: sepia(30%);
+    border: solid 6px $primary;
+
+    @media screen and (max-width:766px) {
+      width: 100%;
+      height: 30vh;
+    }
+  }
+
+  #container:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 150px 20px black;
+    mix-blend-mode: multiply;
+  }
+
+  #pic {
+    opacity: 1;
+  }
+
+  .pic {
+    position: absolute;
+  }
+
+  .line {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    opacity: 0.1;
+    background-color: #000;
+  }
+
+  &__bg {
+    // opacity: 0.9;
+    // filter: blur(2px);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.center-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width:766px) {
+    width: 70%;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 700;
+
+  }
+}
+
+.wrap-detik {
+  width: 640px;
+  margin: 0 auto;
+  display: block;
+
+  @media screen and (max-width: 766px) {
+    width: auto;
+  }
+}
+
+.paragraph {
+  // padding-top: 0;
+
+  p {
+    font-size: 18px;
+
+    @media screen and (max-width: 766px) {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 766px) {
+    padding-top: 16px;
+  }
+
+  position: relative;
+}
+
+.credit {
+  border-top: 5px solid #fbcc56;
+  // background: #c3c4c5;
+  // background: #3a2c11;
+  background: #30250e;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+
+  .wrapings {
+    display: block;
+    width: 50%;
+    margin: 0 auto 4px;
+
+    @media screen and (max-width:766px) {
+      width: 100%;
+    }
+  }
+
+  // #c6c4c4
+  .name,
+  .jobdesc {
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+
+    @media screen and (max-width: 766px) {
+      font-size: 14px;
+    }
+  }
+
+  .name {
+    text-align: left;
+    width: 45%;
+    font-size: 18px;
+    vertical-align: middle;
+
+    @media screen and (max-width:766px) {
+      font-size: 16px;
+    }
+  }
+
+  .jobdesc {
+    text-align: right;
+    width: 45%;
+    font-size: 15px;
+    margin-right: 16px;
+    vertical-align: middle;
+
+    @media screen and (max-width:766px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+.scroll-totop {
+  width: 30px;
+  height: 30px;
+  background: #393935;
+  position: fixed;
+  bottom: 8px;
+
+  text-align: center;
+  right: 8px;
+  cursor: pointer;
+  z-index: 1990;
+  border-radius: 50%;
+  padding: 0;
+  transition: .3s;
+
+  @media screen and (max-width:766px) {
+    bottom: 70px;
+  }
+
+  &:hover {
+    background: #30250e;
+  }
+
+  i {
+    font-size: 16px;
+    color: white;
+  }
+}
+
+.logo-detik {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 999;
+  width: 90px;
+
+  @media screen and (max-width: 766px) {
+    top: 12px;
+    left: 50%;
+    width: 80px;
+    transform: translate(-50%, 0px);
+  }
+}
+
+#komentar {
+  iframe {
+    display: block !important;
+  }
+}
+
+.comics {
+
+  .comic {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Comic Sans', cursive;
+    padding: 1vmin;
+  }
+
+  .panel {
+    background-color: #fff;
+    border: solid 2px #000;
+    box-shadow: 0 6px 6px -6px #000;
+    display: inline-block;
+    flex: 1 1;
+    height: 200px;
+    margin: 1vmin;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .text {
+    background-color: #fff;
+    border: solid 2px #000;
+    margin: 0;
+    padding: 3px 10px;
+  }
+
+  .top-left {
+    left: -6px;
+    position: absolute;
+    top: -2px;
+    transform: skew(-15deg);
+  }
+
+  .bottom-right {
+    bottom: -2px;
+    position: absolute;
+    right: -6px;
+    transform: skew(-15deg);
+  }
+
+  .speech {
+    background-color: #fff;
+    border: solid 2px #000;
+    border-radius: 12px;
+    display: inline-block;
+    margin: .5em;
+    padding: .5em 1em;
+    position: relative;
+  }
+
+  .speech:before {
+    border: solid 12px transparent;
+    border-left: solid 12px #000;
+    border-top: solid 12px #000;
+    bottom: -24px;
+    content: "";
+    height: 0;
+    left: 24px;
+    position: absolute;
+    transform: skew(-15deg);
+    width: 0;
+  }
+
+  .speech:after {
+    border: solid 10px transparent;
+    border-left: solid 10px #fff;
+    border-top: solid 10px #fff;
+    bottom: -19px;
+    content: "";
+    height: 0;
+    left: 27px;
+    position: absolute;
+    transform: skew(-15deg);
+    width: 0;
+  }
+
+  .panel:nth-child(1) {
+    flex-basis: 400px;
+  }
+
+  .panel:nth-child(2) {
+    flex-basis: 200px;
+  }
+
+  .panel:nth-child(3) {
+    flex-basis: 200px;
+  }
+
+  .panel:nth-child(4) {
+    flex-basis: 200px;
+  }
+
+  .panel:nth-child(5) {
+    flex-basis: 200px;
+  }
+
+  .panel:nth-child(6) {
+    flex-basis: 200px;
+  }
+
+  .panel:nth-child(7) {
+    flex-basis: 400px;
+  }
+
+  .panel:nth-child(8) {
+    flex-basis: 200px;
+  }
+
+  .panel:nth-child(9) {
+    flex-basis: 200px;
+  }
+
+  /* background colours */
+
+  .panel:nth-child(4n+1) {
+    background-image: radial-gradient(circle, yellow, orange);
+  }
+
+  .panel:nth-child(4n+2) {
+    background-image: radial-gradient(circle, lightblue, deepskyblue);
+  }
+
+  .panel:nth-child(4n+3) {
+    background-image: radial-gradient(circle, palegreen, yellowgreen);
+  }
+
+  .panel:nth-child(4n+4) {
+    background-image: radial-gradient(circle, lightcoral, tomato);
+  }
+}
