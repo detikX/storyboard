@@ -100,6 +100,9 @@ a:hover {
 
     @media screen and (max-width:766px) {
         // width: 100%;
+        width: calc(50% - 12px);
+        background: #fff;
+        height: calc(50% - 12px);
     }
 
     // border: 2px solid #ccc;
@@ -501,6 +504,7 @@ div.bl-panel-items>div>div {
 
             @media screen and (max-width:766px) {
                 top: 0;
+                width: 80%;
                 right: 0px;
             }
         }
