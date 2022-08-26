@@ -886,7 +886,9 @@ section.bl-expand .bl-icon-close {
 .banners {
     height: 100vh;
     position: relative;
-
+    @media screen and (max-width:766px) {
+        height: 35vh;
+    }
     &__img {
         width: 100%;
         height: 100%;
@@ -916,7 +918,9 @@ section.bl-expand .bl-icon-close {
         text-align: center;
         height: 100px;
         background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent);
-
+        @media screen and (max-width:766px) {
+            font-size: 20px;
+        }
         h1 {
             padding-bottom: 16px;
             font-family: 'Bubblegum Sans', serif;
@@ -987,5 +991,6 @@ section.bl-expand .bl-icon-close {
 
     @media screen and (max-width: 766px) {
         width: auto;
+        padding: 0 16px;
     }
 }
