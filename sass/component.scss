@@ -1059,14 +1059,31 @@ section.bl-expand .bl-icon-close {
         background: white;
         padding: 4px;
         transform: translate(25%,0);
+        @media screen and (max-width:766px) {
+            font-family: "Bubblegum Sans",serif;
+            font-size: 46px;
+            position: absolute;
+            top: 37%;
+            width: 100%;
+            color: #000;
+            background: #fff;
+            padding: 4px;
+            transform: none;
+        }
     }
     .image {
         width: 100%;
         height: auto;
+        @media screen and (max-width:766px) {
+            height: 400px;
+        }
         img {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
         }
     }
 }
