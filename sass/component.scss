@@ -542,19 +542,31 @@ div.bl-panel-items>div>div {
     }
 
     .panel:nth-child(1) {
-        flex-basis: 400px;
+        flex-basis: 420px;
+        @media screen and (min-width:1400px) {
+            flex-basis: 620px;
+        }
     }
 
     .panel:nth-child(2) {
-        flex-basis: 300px;
+        flex-basis: 620px;
+        @media screen and (min-width:1400px) {
+            flex-basis: 800px;
+        }
     }
 
     .panel:nth-child(3) {
-        flex-basis: 255px;
+        flex-basis: 420px;
+        @media screen and (min-width:1400px) {
+            flex-basis: 600px;
+        }
     }
 
     .panel:nth-child(4) {
         flex-basis: 200px;
+        @media screen and (min-width:1400px) {
+            flex-basis: 520px;
+        }
     }
 
     .panel:nth-child(5) {
