@@ -1032,8 +1032,17 @@ section.bl-expand .bl-icon-close {
         bottom: -72px;
         z-index: 1;
         // width: 320px;
-        opacity: .3;
+        opacity: .15;
         height: auto;
+        &.rtop {
+            left: initial;
+            right: 0;
+            bottom: initial;
+            top: 0;
+        }
+        @media screen and (min-width:1400px) {
+            left: 0;
+        }
         @media screen and (max-width:766px) {
             opacity: .07;
         }
@@ -1061,6 +1070,7 @@ section.bl-expand .bl-icon-close {
     text-align: center;
     width: 100%;
     position: relative;
+    z-index: 32;
     h1 {
         font-family: "Bubblegum Sans",serif;
         font-size: 54px;
