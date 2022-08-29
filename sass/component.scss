@@ -941,11 +941,17 @@ section.bl-expand .bl-icon-close {
         }
         h1 {
             padding-bottom: 16px;
+            background: linear-gradient(to right, #fff 0%, #ccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-family: 'Bubblegum Sans', serif;
         }
     }
 
     .trin {
+        background: linear-gradient(to right, #fff 0%, #ccc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         animation-name: trin;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
