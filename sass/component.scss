@@ -175,8 +175,13 @@ a:hover {
     align-items: center;
 
     .image {
-        width: 100%;
+        width: 50%;
         height: 100%;
+        margin-left: 16px;
+        @media screen and (max-width:766px) {
+            width: auto;
+            height: auto;
+        }
 
         img {
             width: 100%;
@@ -235,7 +240,7 @@ a:hover {
 
         @media screen and (max-width:766px) {
             font-size: 34px;
-            left: 16px;
+            left: 0;
         }
     }
 
