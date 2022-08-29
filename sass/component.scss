@@ -1011,6 +1011,9 @@ section.bl-expand .bl-icon-close {
         // width: 320px;
         opacity: .3;
         height: auto;
+        @media screen and (max-width:766px) {
+            opacity: .07;
+        }
         img {
           width: 100%;
           height: 100%;
