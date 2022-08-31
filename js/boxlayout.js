@@ -50,14 +50,14 @@ var Boxlayout = (function() {
 
 			// expand the clicked section and scale down the others
 			$section.on( 'click', function() {
-
+				$('body').addClass('overflow-hidden')
 				if( !$section.data( 'open' ) ) {
 					$section.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
 					$el.addClass( 'bl-expand-item' );	
 				}
 
 			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
-				
+				$('body').removeClass('overflow-hidden')
 				// close the expanded section and scale up the others
 				$section.data( 'open', false ).removeClass( 'bl-expand' ).on( transEndEventName, function( event ) {
 					if( !$( event.target ).is( 'section' ) ) return false;
@@ -78,7 +78,6 @@ var Boxlayout = (function() {
 
 		// clicking on a work item: the current section scales down and the respective work panel slides up
 		$workItems.on( 'click', function( event ) {
-
 			// scale down main section
 			$sectionWork.addClass( 'bl-scale-down' );
 

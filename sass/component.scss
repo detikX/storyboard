@@ -52,7 +52,7 @@ a:hover {
 }
 
 .container {
-    height: 100%;
+    height: 60%;
     width: 80vw;
     margin: 16px auto;
     display: block;
@@ -90,19 +90,29 @@ a:hover {
 
 
 }
-
-.bl-main>section,
-.helper-section {
-    position: absolute;
-    width: calc(50% - 24px);
+.helper-section{
     background: #fff;
-    height: calc(50% - 36px);
+    display: inline-block;
+}
+.bl-main>section {
+    // position: absolute;
+    // width: calc(50% - 24px);
+    width: 32%;
+    background: #fff;
+    display: inline-block;
+    // height: calc(50% - 36px);
+    height: calc(100% - 36px);
 
     @media screen and (max-width:766px) {
         // width: 100%;
-        width: calc(50% - 12px);
+        // width: calc(50% - 12px);
+        // background: #fff;
+        // height: calc(50% - 12px);
+
+        width: calc(100% - 12px);
         background: #fff;
-        height: calc(50% - 12px);
+        height: calc(32% - 6px);
+        margin: 4px 0;
     }
 
     // border: 2px solid #ccc;
@@ -611,7 +621,7 @@ div.bl-panel-items>div>div {
 }
 
 .bl-content p {
-    margin: 0 auto;
+    // margin: 0 auto;
     padding-bottom: 15px;
     font-size: 18px;
     line-height: 22px;
@@ -820,6 +830,9 @@ div.bl-panel-items>div.bl-hide-current-work {
 .bl-main>section.bl-expand-top {
     z-index: 100;
     position: fixed;
+    @media screen and (max-width:766px) {
+        margin: 0 !important;
+    }
 }
 
 .bl-main>section:first-child.bl-expand {
@@ -1108,5 +1121,66 @@ section.bl-expand .bl-icon-close {
                 object-fit: cover;
             }
         }
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.quotation {
+    position: relative;
+    // border: 2px dotted #858585;
+    width: fit-content;
+    margin: 16px 0;
+    font-family: 'Bubblegum Sans';
+    font-size: 46px;
+    // text-align: center;
+    @media screen and (max-width:766px) {
+        font-size: 36px;
+    }
+    &::before{
+        content: "“";
+        font-size: 4em;
+        position: absolute;
+        left: -24px;
+        top: -24px;
+        color: #666;
+    }
+    &::after {
+        content: "”";
+        font-size: 4em;
+        position: absolute;
+        right: -36px;
+        top: 60px;
+        color: #666;
+        @media screen and (max-width:766px) {
+            height: 84px;
+            bottom: 0;
+            top: initial;
+        }
+    }
+    blockquote {
+        float: left;
+        @media screen and (max-width:766px){
+            margin: 24px 36px;
+            width: 100%;
+        }
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+.text-right {
+    font-size: 18px;
+    font-weight: 800;
+    color: #666;
+    // text-align: right;
+    position: relative;
+    top: -32px;
+    &::before{
+        content: '-';
     }
 }
