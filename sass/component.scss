@@ -55,6 +55,7 @@ a:hover {
     height: 60%;
     width: 80vw;
     margin: 16px auto;
+    z-index: 23;
     display: block;
     text-align: center;
     position: relative;
@@ -83,7 +84,10 @@ a:hover {
 
 .helper-section {
     background: #efe9e9 !important;
-
+    width: fit-content;
+    margin: 0 auto;
+    display: block !important;
+    text-align: center;
     .bl-box {
         cursor: initial !important;
     }
@@ -213,10 +217,10 @@ a:hover {
         // font-weight: 700;
         padding: 54px 0px;
         position: relative;
-        font-family: 'Montserrat';
+        // font-family: 'Montserrat';
 
         @media screen and (max-width:766px) {
-            padding: 0 24px;
+            padding: 0px 0px;
             text-align: left;
         }
     }
@@ -241,7 +245,7 @@ a:hover {
         list-style: none;
         color: #daa520;
         font-size: 40px;
-        font-family: "Montserrat";
+        // font-family: "Montserrat";
         font-weight: 700;
         text-align: left;
         position: relative;
@@ -1053,6 +1057,10 @@ section.bl-expand .bl-icon-close {
             right: 0;
             bottom: initial;
             top: 0;
+            @media screen and (max-width:766px) {
+                // left: 0;
+                display: none;
+            }
         }
         @media screen and (min-width:1400px) {
             left: 0;
